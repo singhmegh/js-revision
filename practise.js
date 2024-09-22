@@ -153,53 +153,60 @@ console.log(a());
 //Write a function which take ytwo no.and perform all operations
 let m = 2;
 let n = 7;
-const operations = (m,n) => {
-    //return operations;
-console.log (m+n);
-console.log (m-n);
-console.log (m*n);
-console.log (m%n);
-}
+const operations = (m, n) => {
+  //return operations;
+  console.log(m + n);
+  console.log(m - n);
+  console.log(m * n);
+  console.log(m % n);
+};
 //operations(m,n);
 
 //---------------------------------------------------------------------------------------------------------------
 //Write a funtion which take array as input
-let k =[1,2,3,4,8,6,9]
+let k = [1, 2, 3, 4, 8, 6, 9];
 const arr = (k) => {
-console.log(k);
-}
+  console.log(k);
+};
 //arr(k);
 //----------------------------------------------------------------------------------------------------------------
 //Write a function which take a string from the u
-const details =(FullName,college,course,branch,year) => {
-    console.log(
-  `Hello Myself ${FullName}.I am currently studying in ${college} pursuing a${course} in ${branch}.I am currently in ${year}.`
-);
+const details = (FullName, college, course, branch, year) => {
+  console.log(
+    `Hello Myself ${FullName}.I am currently studying in ${college} pursuing a${course} in ${branch}.I am currently in ${year}.`
+  );
 };
- //details ("Megha","Gautam buddha university","B.tech","IT" ,"fourth");
- //--------------------------------------------------------------------------------------------------------------
- //Write a fun which take the input as a parameter and return thestring in lowercase format
- const myName =(string) => {
+//details ("Megha","Gautam buddha university","B.tech","IT" ,"fourth");
+//--------------------------------------------------------------------------------------------------------------
+//Write a fun which take the input as a parameter and return thestring in lowercase format
+const myName = (string) => {
   return string.toLowerCase();
- };
- //console.log(myName("MEgha"));
+};
+//console.log(myName("MEgha"));
 //------------------------------------------------------------------------------------------------------------------
- //write a fun which take input as a parameter and check input is even or not
- const number = (input) => {
-  return input %2 === 0 ;
- };
- console.log(number(90));
- //-----------------------------------------------------------------------------------------------------------------
- //Write a fun which take input as parameter and return the total length of string ,count white space too
- const naam = (input) => {
-  return input.length ;    //.length is used to count the lengt of a string
- };
- console.log(naam("megha"));
- console.log(naam("Megha singh"));
- //-------------------------------------------------------------------------------------------------------------------
- //Write a fun which take input as parameter and return the total length of string ,and not to count white space
- const meraNaam =(input)=> {
-  return input.replace().length
- };
- console.log(meraNaam("Megha"));
- console.log(meraNaam("pasandida aurat"));
+//write a fun which take input as a parameter and check input is even or not
+const number = (input) => {
+  return input % 2 === 0;
+};
+console.log(number(90));
+//-----------------------------------------------------------------------------------------------------------------
+//Write a fun which take input as parameter and return the total length of string ,count white space too
+const naam = (input) => {
+  return input.length; //.length is used to count the lengt of a string
+};
+console.log(naam("megha"));
+console.log(naam("Megha singh"));
+//-------------------------------------------------------------------------------------------------------------------
+//Write a fun which take input as parameter and return the total length of string ,and not to count white space
+const meraNaam = (input) => {
+  let count = 0;
+  for (let i = 0; i < input.length; i++) {
+    if (input[i] != " ") {
+      count++;
+    }
+    //console.log(input[i]);
+  }
+  return count;
+};
+console.log(meraNaam("Megha"));
+console.log(meraNaam("pasandida aurat"));
