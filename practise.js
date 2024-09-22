@@ -177,3 +177,29 @@ const details =(FullName,college,course,branch,year) => {
 );
 };
  //details ("Megha","Gautam buddha university","B.tech","IT" ,"fourth");
+ //--------------------------------------------------------------------------------------------------------------
+ //Write a fun which take the input as a parameter and return thestring in lowercase format
+ const myName =(string) => {
+  return string.toLowerCase();
+ };
+ //console.log(myName("MEgha"));
+//------------------------------------------------------------------------------------------------------------------
+ //write a fun which take input as a parameter and check input is even or not
+ const number = (input) => {
+  return input %2 === 0 ;
+ };
+ console.log(number(90));
+ //-----------------------------------------------------------------------------------------------------------------
+ //Write a fun which take input as parameter and return the total length of string ,count white space too
+ const naam = (input) => {
+  return input.length ;    //.length is used to count the lengt of a string
+ };
+ console.log(naam("megha"));
+ console.log(naam("Megha singh"));
+ //-------------------------------------------------------------------------------------------------------------------
+ //Write a fun which take input as parameter and return the total length of string ,and not to count white space
+ const meraNaam =(input)=> {
+  return input.replace().length
+ };
+ console.log(meraNaam("Megha"));
+ console.log(meraNaam("pasandida aurat"));
