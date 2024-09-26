@@ -188,14 +188,14 @@ const myName = (string) => {
 const number = (input) => {
   return input % 2 === 0;
 };
-console.log(number(90));
+//console.log(number(90));
 //-----------------------------------------------------------------------------------------------------------------
 //Write a fun which take input as parameter and return the total length of string ,count white space too
 const naam = (input) => {
   return input.length; //.length is used to count the lengt of a string
 };
-console.log(naam("megha"));
-console.log(naam("Megha singh"));
+//console.log(naam("megha"));
+//console.log(naam("Megha singh"));
 //-------------------------------------------------------------------------------------------------------------------
 //Write a fun which take input as parameter and return the total length of string ,and not to count white space
 const meraNaam = (input) => {
@@ -208,5 +208,52 @@ const meraNaam = (input) => {
   }
   return count;
 };
-console.log(meraNaam("Megha"));
-console.log(meraNaam("pasandida aurat"));
+//console.log(meraNaam("Megha"));
+//console.log(meraNaam("pasandida aurat"));
+//-----------------------------------------------------------------------------------------------------------------
+//Write a fun which take the input(n) as a parameter and print the number till the input[0,n].
+const num = (n) => {
+  for (let i = 1; i <= n; i++) {
+    console.log(i);
+  }
+};
+//num(7);
+//-------------------------------------------------------------------------------------------------------------------
+//Write a fun which take a array of number as a parameter and return the array that have double of element present in array input
+//with map
+const numm = (arr) => {
+  return arr.map((n) => {
+    return n * 2;
+  });
+};
+//console.log(numm([1,2,3,4,5]));
+
+//without map
+const nummm = () => {
+  for(let i= 0; i<=nummm.length; i++){
+    return (nummm[i]*2 );
+  }
+};
+//nummm([1,2,3,4,5]);
+
+//-----------------------------------------------------------------------------------------------------------------
+//Write a fun which take the array as a parameter and return reverse of input array
+const arr2 =(arr) =>{
+  return arr.reverse();
+};
+//console.log(arr2([1,2,3]));
+//---------------------------------------------------------------------------------------------------------------
+//Write a fun  which take the array of number as parameter and return the array of total even ,od no.present in the array
+const arr1 = ()=> {
+  let odd =0;
+  let even =0;
+  for(let i =0; i< arr1.length; i++){
+    if(arr1[i]%2 === 0){
+      even++;
+    }
+    else{ odd++;
+    }
+  }
+  return[even,odd];
+};
+console.log(arr1([1,2,3,4,5]));
