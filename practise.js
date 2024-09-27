@@ -229,12 +229,15 @@ const numm = (arr) => {
 //console.log(numm([1,2,3,4,5]));
 
 //without map
-const nummm = () => {
-  for(let i= 0; i<=nummm.length; i++){
-    return (nummm[i]*2 );
+
+ const nummm = (nummm)=>{
+  let arr=[];
+  for(let i =0; i<nummm.length; i++){
+         arr.push(nummm[i]*2);
   }
-};
-//nummm([1,2,3,4,5]);
+  return arr ;
+ };
+ //console.log(nummm([1,2,3,4,5]));
 
 //-----------------------------------------------------------------------------------------------------------------
 //Write a fun which take the array as a parameter and return reverse of input array
@@ -244,7 +247,7 @@ const arr2 =(arr) =>{
 //console.log(arr2([1,2,3]));
 //---------------------------------------------------------------------------------------------------------------
 //Write a fun  which take the array of number as parameter and return the array of total even ,od no.present in the array
-const arr1 = ()=> {
+const arr1 = (arr1)=> {
   let odd =0;
   let even =0;
   for(let i =0; i< arr1.length; i++){
@@ -256,4 +259,25 @@ const arr1 = ()=> {
   }
   return[even,odd];
 };
-console.log(arr1([1,2,3,4,5]));
+//console.log(arr1([1,2,3,4,5]));
+//----------------------------------------------------------------------------------------------------------------
+//write a fun which take two input arraya nd value and perform binary search to find th value 
+const binary =(arr , value)=>{
+let left = 0;
+let right = arr.length -1;
+
+while(arr <= right){
+  const mid = math.floor((left+right)/2);  //math.floor make round no.
+if (arr[mid]=== value){
+  return mid;
+}
+if (arr[mid] <value){
+  left = mid+1;
+}
+else{
+right = mid-1;
+};
+};
+return -1;
+};
+console.log(binary([1,2,3,4,5,6],4));
