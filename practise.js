@@ -266,8 +266,8 @@ const binary =(arr , value)=>{
 let left = 0;
 let right = arr.length -1;
 
-while(arr <= right){
-  const mid = math.floor((left+right)/2);  //math.floor make round no.
+while(left <= right){
+  const mid = Math.floor((left+right)/2);  //math.floor make round no.
 if (arr[mid]=== value){
   return mid;
 }
