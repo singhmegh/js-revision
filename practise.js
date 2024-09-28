@@ -230,54 +230,81 @@ const numm = (arr) => {
 
 //without map
 
- const nummm = (nummm)=>{
-  let arr=[];
-  for(let i =0; i<nummm.length; i++){
-         arr.push(nummm[i]*2);
+const nummm = (nummm) => {
+  let arr = [];
+  for (let i = 0; i < nummm.length; i++) {
+    arr.push(nummm[i] * 2);
   }
-  return arr ;
- };
- //console.log(nummm([1,2,3,4,5]));
+  return arr;
+};
+//console.log(nummm([1,2,3,4,5]));
 
 //-----------------------------------------------------------------------------------------------------------------
 //Write a fun which take the array as a parameter and return reverse of input array
-const arr2 =(arr) =>{
+const arr2 = (arr) => {
   return arr.reverse();
 };
 //console.log(arr2([1,2,3]));
 //---------------------------------------------------------------------------------------------------------------
 //Write a fun  which take the array of number as parameter and return the array of total even ,od no.present in the array
-const arr1 = (arr1)=> {
-  let odd =0;
-  let even =0;
-  for(let i =0; i< arr1.length; i++){
-    if(arr1[i]%2 === 0){
+const arr1 = (arr1) => {
+  let odd = 0;
+  let even = 0;
+  for (let i = 0; i < arr1.length; i++) {
+    if (arr1[i] % 2 === 0) {
       even++;
-    }
-    else{ odd++;
+    } else {
+      odd++;
     }
   }
-  return[even,odd];
+  return [even, odd];
 };
 //console.log(arr1([1,2,3,4,5]));
 //----------------------------------------------------------------------------------------------------------------
-//write a fun which take two input arraya nd value and perform binary search to find th value 
-const binary =(arr , value)=>{
-let left = 0;
-let right = arr.length -1;
+//write a fun which take two input arraya nd value and perform binary search to find th value
+const binary = (arr, value) => {
+  let left = 0;
+  let right = arr.length - 1;
 
-while(left <= right){
-  const mid = Math.floor((left+right)/2);  //math.floor make round no.
-if (arr[mid]=== value){
-  return mid;
+  while (left <= right) {
+    const mid = Math.floor((left + right) / 2); //math.floor make round no.
+    if (arr[mid] === value) {
+      return mid;
+    }
+    if (arr[mid] < value) {
+      left = mid + 1;
+    } else {
+      right = mid - 1;
+    }
+  }
+  return -1;
+};
+//console.log(binary([1,2,3,4,5,6],4));
+//-------------------------------------------------------------------------------------------------------------------
+//Write a fun which take a no. as a input and print a fibonacci no.
+const fibonacci = (num) => {
+  let num1 = 0;
+  let num2 = 1;
+let sum;
+  for (let i = 1; i <= num; i++) {
+    sum = num1 + num2;
+    num1 = num2;
+    num2 = sum;
+  }
+ 
+};
+console.log(num(8));
+//-----------------------------------------------------------------------------------------------------------------------
+//Write a fun which take a string as a input and satisfied these conditions.
+const string=(str)=> {
+  if(str.toUpperCase){
+    true;
+  }
+  if(str.toLowerCase){
+    true;
+  }
+  if(str === @,#,$,&,*){
+    true;
+  }
+  if(str)
 }
-if (arr[mid] <value){
-  left = mid+1;
-}
-else{
-right = mid-1;
-};
-};
-return -1;
-};
-console.log(binary([1,2,3,4,5,6],4));
